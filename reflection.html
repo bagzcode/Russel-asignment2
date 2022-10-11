@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Reflection using HTML and CSS</title>
+    <style>
+      body 
+     {
+       /* Radiel gradient defined by its center*/
+        background-image: radial-gradient(#013220,#008000);
+        height: 100vh;
+      }
+   
+      h2 {
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        text-transform: capitalize;
+        color: white;
+        font-size: 50px;
+      }
+      h2::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+    /* Change the position of transformed element */
+        transform-origin: bottom;
+    /*  Rotates around x-axis */
+        transform: rotateX(180deg);
+        line-height: 0.85em;
+    /* linear-gradient defined by up,down,left ,right ,diagonal */
+        background-image: linear-gradient(0deg, #ffffff 0, transparent 95%);
+        -webkit-background-clip: text;
+        color: translucent;         
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 data-text="My Reflection">My Reflection</h2>
+    <h3><i>I find learning about HTML and making my first webpage is fun and challengin at the same time. The only issues that I face is that I get lost sometimes during the coding process. For example, missing some quotation mark or detailed symbols that are relevent for the code. It is quite frustrating at first but I manage to get use to it after a certain amount of time. For writing the code, I use an app called SublimeText which I think is really convenient for me. I use Google Chrome as the browser to test out the actual output of the HTML code. When I viewed my page in a browser to test it for the first time, I was amazed and a little proud of how cool creating a webpage works. </i></h3>
+<hr>
+
+  </body>
+</html>
